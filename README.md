@@ -1,5 +1,7 @@
 フォルダ構成
 Python:FFT生成のために使用している
+frontend:計算したFFTの値を描画されている。また今回はReactを使用している
+backend:FFTの値をReactに返す。また今回はpfpを使用している
 
 
 画面一覧
