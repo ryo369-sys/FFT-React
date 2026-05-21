@@ -5,6 +5,7 @@ backend:FFTの値をReactに返す。また今回はpfpを使用している
 
 
 画面一覧
+figmaを使用
 画面遷移図
 API一覧
 DB設計
