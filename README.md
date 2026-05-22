@@ -7,6 +7,8 @@ backend:FFTの値をReactに返す。また今回はpfpを使用している
 Radio　Bottomを追加した
 次
 Radio Bottomからパラメータを持ってきてFFTに代入する
+また、今回でReactにApp.tsxがなかったため一から作り直したため
+入れ直すことをする予定
 
 
 
