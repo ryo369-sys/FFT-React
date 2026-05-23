@@ -7,6 +7,7 @@ backend:FFTの値をReactに返す。また今回はpfpを使用している
 Radio　Bottomを追加した
 次
 Radio Bottomからパラメータを持ってきてFFTに代入する(この時はTypeScriptで受取るか、phpで受け取るかを考える)
+・どれがcomponentsに入れて、どこがpagesのフォルダに保存するか決めていく
 
 また、今回でReactにApp.tsxがなかったため一から作り直したため
 入れ直すことをする予定
