@@ -1,12 +1,12 @@
 フォルダ構成
 Python:FFT生成のために使用している
 frontend:計算したFFTの値を描画されている。また今回はReactを使用している
-backend:FFTの値をReactに返す。また今回はpfpを使用している
+backend:FFTの値をReactに返す。また今回はphpを使用している
 
 現時点の進捗
 Radio　Bottomを追加した
 次
-Radio Bottomからパラメータを持ってきてFFTに代入する(この時はTypeScriptで受取る)
+Radio Bottomからパラメータを持ってきてFFTに代入する(この時はTypeScriptで受取りphpへリクエストする)
 ・どれがcomponentsに入れて、どこがpagesのフォルダに保存するか決めていく
 
 また、今回でReactにApp.tsxがなかったため一から作り直したため
