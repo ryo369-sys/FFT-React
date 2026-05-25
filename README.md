@@ -4,7 +4,7 @@ frontend:計算したFFTの値を描画されている。また今回はReactを
 	backend:FFTの値をReactに返す。また今回はphpを使用している
 
 現時点の進捗
-Radio　Bottomを追加した
+auidoファイルのみを読み込める部分を追加した
 次
 Radio Bottomからパラメータを持ってきてFFTに代入する(この時はTypeScriptで受取りphpへリクエストする)
 
