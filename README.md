@@ -6,7 +6,8 @@ frontend:計算したFFTの値を描画されている。また今回はReactを
 現時点の進捗
 auidoファイルのみを読み込める部分を追加した
 次
-音声ファイルを追加できるためFFT・Wave・spectram画面をそれぞれ作成する
+・音声ファイルを追加できるためFFT・Wave・spectram画面をそれぞれ作成する
+・FFTでは音声の波形を表示されるための画面の追加
 Radio Bottomからパラメータを持ってきてFFTに代入する(この時はTypeScriptで受取りphpへリクエストする)
 
 
