@@ -39,7 +39,7 @@ export const RadioExample = () => {
           checked={selectValue === "Spectrum"}
           onChange={handleChange}
         />
-        Wave
+        Spectrum
       </label>
       <p>選択された形式: {selectValue}</p>
     </div>
