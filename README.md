@@ -7,7 +7,6 @@ frontend:計算したFFTの値を描画されている。また今回はReactを
 Radio　Bottomを追加した
 次
 Radio Bottomからパラメータを持ってきてFFTに代入する(この時はTypeScriptで受取りphpへリクエストする)
-・どれがcomponentsに入れて、どこがpagesのフォルダに保存するか決めていく
 
 
 画面一覧
