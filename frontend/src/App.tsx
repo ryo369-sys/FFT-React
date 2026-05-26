@@ -3,15 +3,16 @@ import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
-import {RadioExample} from './components/ui/Radio'
+import AppRoutes from "./routes/index";
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
-    <div>
-      <RadioExample />
-    </div>
+    <>
+          <AppRoutes />
+    </>
   )
 }
-
 
 export default App
