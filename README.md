@@ -5,6 +5,7 @@ frontend:計算したFFTの値を描画されている。また今回はReactを
 
 現時点の進捗
 React routerを用いてページ遷移を実装した
+
 次
 ・音声ファイルを追加できるためFFT・Wave・spectram画面をそれぞれ作成する
 ・現時点ではWave画面を最初に作成する
