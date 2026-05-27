@@ -1,9 +1,14 @@
-function App() {
+import { Link } from 'react-router-dom';
+
+function Open_file() {
   return (
-    <div>
-      <input type="file" />
-    </div>
+    <nav>
+      <div>
+        <input type="file" />
+      </div>
+      <Link to="/sample">sample</Link>
+    </nav>
   )
 }
 
-export default App
+export default Open_file

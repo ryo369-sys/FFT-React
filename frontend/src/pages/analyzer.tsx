@@ -1,12 +1,8 @@
 import { Link } from 'react-router-dom';
 
-function Analyzer() {
+const Analyzer = () => {
   return (
-    <nav>
-      <Link to="/">Home</Link>
-      <Link to="/analyzer">analyzer</Link>
-      <div>analyzer</div>
-    </nav>
+      <h1>analyzer</h1>
   );
 }
 
