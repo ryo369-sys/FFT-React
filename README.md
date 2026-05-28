@@ -9,7 +9,7 @@ pagesにanalizer.tsxを作成
 
 次
 ・音声ファイルを追加できるためFFT・Wave・spectram画面をそれぞれ作成する
-・現時点ではAnalizer画面を最初に作成する予定
+・pagesにanalizer.tsxを作成したため、ここで機能を追加していく
 ・FFTでは音声の波形を表示されるための画面の追加(componentsに作成する)
 Radio Bottomからパラメータを持ってきてFFTに代入する(この時はTypeScriptで受取りphpへリクエストする)
 
