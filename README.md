@@ -5,7 +5,7 @@ backend:FFTの値をReactに返す。また今回はphpを使用している
 
 現時点の進捗
 React routerを用いてページ遷移を実装した
-pagesにanalizer.tsxを作成
+ファイルのインポートするためのコンポーネントの作成
 
 次
 ・音声ファイルを追加できるためFFT・Wave・spectram画面をそれぞれ作成する
