@@ -5,10 +5,10 @@ backend:FFTの値をReactに返す。また今回はphpを使用している
 
 現時点の進捗
 React routerを用いてページ遷移を実装した
-・FFTでは音声の波形を表示されるための画面の追加(componentsに作成する)
+・サンプルデータで波形グラフを作成した
 
 次
-・音声ファイルを追加できるためFFT・Wave・spectram画面をそれぞれ作成する
+・Pythonからjsonを受け取りそれがプロットできるように実装する
 ・pagesにanalizer.tsxを作成したため、ここで機能を追加していく
 Radio Bottomからパラメータを持ってきてFFTに代入する(この時はTypeScriptで受取りphpへリクエストする)
 
