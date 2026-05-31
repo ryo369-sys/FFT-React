@@ -26,16 +26,10 @@ export const FileUpload = () => {
     }
     return (
         <div>
-            <input onChange={handleFileChange} name="file" type="file" />
             <input
                     type="file"
-                    name="file1"
+                    accept=".wav"
                     onChange={handleFileChange}
-            />
-            <input 
-                onChange={handleFileChange} 
-                name="file" 
-                type="file2"
             />
         </div>
     );
