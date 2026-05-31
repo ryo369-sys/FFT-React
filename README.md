@@ -5,10 +5,10 @@ backend:FFTの値をReactに返す。また今回はphpを使用している
 
 現時点の進捗
 ・サンプルデータで波形グラフを作成した
+・FastApiにリクエストを返す
 
 次
 ・Pythonからjsonを受け取りそれがプロットできるように実装する
-・pagesにanalizer.tsxを作成したため、ここで機能を追加していく
 Radio Bottomからパラメータを持ってきてFFTに代入する(この時はTypeScriptで受取りphpへリクエストする)
 
 
