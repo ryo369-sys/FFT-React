@@ -9,6 +9,7 @@ backend:FFTの値をReactに返す。また今回はphpを使用している
 
 次
 ・Pythonからjsonを受け取りそれがプロットできるように実装する
+・ファイルインポートの時の送信ボタンのコンポーネントを追加
 Radio Bottomからパラメータを持ってきてFFTに代入する(この時はTypeScriptで受取りphpへリクエストする)
 
 
