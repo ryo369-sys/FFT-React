@@ -3,7 +3,6 @@ Python:FFT生成のために使用している
 frontend:計算したFFTの値を描画されている。また今回はReactを使用している
 backend:FFTの値をReactに返す。また今回はphpを使用している
 
-componentファイルの説明
 
 現時点の進捗
 ・サンプルデータで波形グラフを作成した
