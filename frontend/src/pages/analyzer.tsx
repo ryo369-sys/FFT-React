@@ -2,6 +2,9 @@ import { SoundButton } from '../components/ui/read_file';
 import { FileUpload } from '../components/ui/read-sound';
 import { FFTChart }  from '../components/charts/FFTChart';
 import { useEffect } from 'react'
+import { AnalyzeButton } from '../components/ui/AnalyzeButtom';
+import React,{useState } from 'react';
+//import { GetFile } from '../components/ui/AnalyzeButtom';
 
 const Analyzer = () => {
   const sampleData = [
@@ -11,6 +14,7 @@ const Analyzer = () => {
   { time: 3, amplitude: 0.5 },
   { time: 4, amplitude: 0 }
 ]
+    const [file, setSelectedFile] = useState(null);
 
   useEffect(() => {
     fetch('http://localhost:8000/fft/fft')
@@ -22,8 +26,9 @@ const Analyzer = () => {
   return (
     <div>
       <h1>analyzer</h1>
-      <FFTChart data={sampleData}/>
-      <FileUpload/>
+      <FFTChart data = {sampleData}/>
+      <FileUpload onFileSelect = {setSelectedFile}/>
+      <AnalyzeButton file = {file}/>
       <SoundButton/>
     </div>
   );

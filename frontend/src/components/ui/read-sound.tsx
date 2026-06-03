@@ -1,36 +1,27 @@
-import React,{useState } from 'react';
-import useSound from 'use-sound';
+type Props = {
+  onFileSelect: (file: File | null) => void;
+};
 
+export const FileUpload = ({
+      onFileSelect
+    }: Props) => {
+        const handleFileChange = (
+            e: React.ChangeEvent<HTMLInputElement>
+        ) => {
+            const file = e.target.files?.[0] ?? null;
 
-export const FileUpload = () => {
-    const [file, setFile] = useState(null);
-        const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-            if (e.target.files && e.target.files.length > 0) {
-                setFile(e.target.files[0]);
-            } else {
-                setFile(undefined);
-            }
-        };
-    
-    const handleDragOver = (e: React.ChangeEvent<HTMLInputElement>) => {
-        e.preventDefault();
-            const file = e.target.files?.[0]
-        console.log(file)
-    };
-
-    const handleDrop = (e: React.DragEvent<HTMLDivElement>) => {
-        e.preventDefault();
-            if (e.dataTransfer.files) {
-                setFile(Array.from(e.dataTransfer.files));
-            }
-    }
+        onFileSelect(file);
+};
     return (
-        <div>
-            <input
-                    type="file"
-                    accept=".wav"
-                    onChange={handleFileChange}
-            />
-        </div>
+    <div>
+
+      <input
+        type="file"
+        accept=".wav"
+        onChange={handleFileChange}
+      />
+    </div>
     );
 };
+
+export default FileUpload;
