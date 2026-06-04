@@ -14,7 +14,7 @@ const Analyzer = () => {
   { time: 3, amplitude: 0.5 },
   { time: 4, amplitude: 0 }
 ]
-    const [file, setSelectedFile] = useState(null);
+    const [file, setSelectedFile] = useState<File | null>(null);
 
   useEffect(() => {
     fetch('http://localhost:8000/fft/fft')
@@ -22,6 +22,11 @@ const Analyzer = () => {
       .then((data) => console.log(data))
   }, [])
 
+  useEffect(() => {
+    fetch('http://localhost:8000/fft/upload')
+      .then((res) => res.json())
+      .then((data) => console.log(data))
+  }, [])
 
   return (
     <div>
@@ -29,7 +34,9 @@ const Analyzer = () => {
       <FFTChart data = {sampleData}/>
       <FileUpload onFileSelect = {setSelectedFile}/>
       <AnalyzeButton file = {file}/>
-      <SoundButton/>
+      <div>
+        <SoundButton/>
+      </div>
     </div>
   );
 };
