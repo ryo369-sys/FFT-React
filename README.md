@@ -32,4 +32,4 @@ DB設計
 起動
 npm run dev
 
-http://localhost:8000/docs
+uvicorn app.main:app --reload
