@@ -27,3 +27,9 @@ figmaを使用
 API一覧
 DB設計
 ディレクトリ構成FFTをPythonで実装してそれをFastAPIでフロントエンドにレスポンスで返す
+
+
+起動
+npm run dev
+
+http://localhost:8000/docs
