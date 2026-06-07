@@ -1,6 +1,8 @@
 from fastapi import APIRouter
 from fastapi import UploadFile, File
-from app.fft.analyze import analyze
+from scipy.io import wavfile
+from io import BytesIO
+from app.fft.analyzer import analyze
 
 router = APIRouter(
     prefix="/fft",
@@ -24,11 +26,22 @@ def fft_check():
 async def upload_audio(
     audio_file: UploadFile = File(...)
 ):
-    sample = analyze()
-    print(audio_file.filename)
-    contents = await audio_file.read()
-    print(len(contents))
+    wav = await audio_file.read()
+    sample_rate, signal = wavfile.read(
+        BytesIO(wav)
+    )
+    if signal.ndim > 1:
+        signal = signal[:, 0]
+
+    freq, amp = analyze(signal)
+
+    print(freq)
+    print(amp)
+    print(type(signal))
+    print(signal.shape)
 
     return {
-        "filename": audio_file.filename
+    "message": "FFT success",
+    "frequency_count": len(freq),
+    "amplitude_count": len(amp)
     }
