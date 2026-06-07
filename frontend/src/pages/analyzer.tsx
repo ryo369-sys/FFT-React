@@ -17,13 +17,13 @@ const Analyzer = () => {
     const [file, setSelectedFile] = useState<File | null>(null);
 
   useEffect(() => {
-    fetch('http://localhost:8000/fft/fft')
+    fetch("http://localhost:8000/fft/fft")
       .then((res) => res.json())
       .then((data) => console.log(data))
   }, [])
 
   useEffect(() => {
-    fetch('http://localhost:8000/fft/upload')
+    fetch("http://localhost:8000/fft/upload")
       .then((res) => res.json())
       .then((data) => console.log(data))
   }, [])

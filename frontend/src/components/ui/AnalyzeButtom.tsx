@@ -21,7 +21,7 @@ export const AnalyzeButton = ({
     )
 
     await fetch(
-      "http://localhost:8000/fft/upload",
+      "http://localhost:8000/fft/fft/upload",
       {
         method: "POST",
         body: formData
