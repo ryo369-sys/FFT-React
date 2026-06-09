@@ -13,7 +13,7 @@ backend:FFTの値をReactに返す。また今回はphpを使用している
 Radio Bottomからパラメータを持ってきてFFTに代入する(この時はTypeScriptで受取りphpへリクエストする)
 
 理解したこと
-・useStatusの使い方　→　
+・useStatusの使い方
 
 
 コンポーネント
