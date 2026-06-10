@@ -4,36 +4,42 @@ import { FFTChart }  from '../components/charts/FFTChart';
 import { useEffect } from 'react'
 import { AnalyzeButton } from '../components/ui/AnalyzeButtom';
 import React,{useState } from 'react';
-//import { GetFile } from '../components/ui/AnalyzeButtom';
 
-const Analyzer = () => {
-  const sampleData = [
-  { time: 0, amplitude: 0 },
-  { time: 1, amplitude: 0.5 },
-  { time: 2, amplitude: 1.0 },
-  { time: 3, amplitude: 0.5 },
-  { time: 4, amplitude: 0 }
-]
-    const [file, setSelectedFile] = useState<File | null>(null);
+type WavePoint = {
+  time: number
+  amplitude: number
+}
+
+
+export const Analyzer = () =>  {
+
+  const [file, setSelectedFile] =
+  useState<File | null>(null)
+
+  const [waveData, setWaveData] =
+  useState<WavePoint[]>([])
 
   useEffect(() => {
-    fetch('http://localhost:8000/fft/fft')
+    fetch('http://localhost:8000/fft/send-wave')
       .then((res) => res.json())
       .then((data) => console.log(data))
   }, [])
 
-  useEffect(() => {
-    fetch('http://localhost:8000/fft/upload')
-      .then((res) => res.json())
-      .then((data) => console.log(data))
-  }, [])
+
+
+//const waveChartData = data.time.map(
+//  (time: number, index: number) => ({
+//    time,
+//    amplitude: data.amplitude[index]
+//  })
+//)
 
   return (
     <div>
       <h1>analyzer</h1>
-      <FFTChart data = {sampleData}/>
       <FileUpload onFileSelect = {setSelectedFile}/>
-      <AnalyzeButton file = {file}/>
+      <AnalyzeButton file = {file}  onResult={setWaveData}/>
+      <FFTChart data = {waveData}/>
       <div>
         <SoundButton/>
       </div>
