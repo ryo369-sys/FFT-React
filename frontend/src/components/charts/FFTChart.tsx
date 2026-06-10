@@ -11,8 +11,9 @@ type Props = {
 }
 
 export const FFTChart = ({ data }: Props) => {
+
   return (
-  <LineChart width={600} height={300} data={data}>
+  <LineChart width={800} height={300} data={data}>
     <Line
       type="monotone"
       dataKey="amplitude"

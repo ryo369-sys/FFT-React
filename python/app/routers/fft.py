@@ -35,13 +35,30 @@ async def upload_audio(
 
     freq, amp = analyze(signal)
 
-    print(freq)
-    print(amp)
-    print(type(signal))
-    print(signal.shape)
-
     return {
     "message": "FFT success",
     "frequency_count": len(freq),
     "amplitude_count": len(amp)
+    }
+
+@router.post("/fft/send-wave")
+async def upload_audio(
+    audio_file: UploadFile = File(...)
+):
+    wav = await audio_file.read()
+    sample_rate, signal = wavfile.read(
+        BytesIO(wav)
+    )
+    if signal.ndim > 1:
+        signal = signal[:, 0]
+
+    times = [
+        i / sample_rate
+        for i in range(len(signal))
+    ]
+
+    return {
+    "message": "FFT-send success",
+    "time": times[:5000],
+    "amplitude": signal[:5000].tolist()
     }
