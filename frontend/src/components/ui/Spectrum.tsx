@@ -1,14 +1,14 @@
-type WavePoint = {
-  time: number
+type SpectrumPoint = {
+  frequency: number
   amplitude: number
 }
 
 type Props = {
   file: File | null
-  onResult: (data: WavePoint[]) => void
+  onResult: (data: SpectrumPoint[]) => void
 }
 
-export const AnalyzeButton = ({
+export const Spectrum = ({
   file,
   onResult
 }: Props) => {
@@ -28,7 +28,7 @@ export const AnalyzeButton = ({
     )
 
     const response = await fetch(
-      "http://localhost:8000/fft/fft/send-wave",
+      "http://localhost:8000/fft/fft/spectrum",
       {
         method: "POST",
         body: formData
@@ -37,9 +37,9 @@ export const AnalyzeButton = ({
     const data = await response.json()
     console.log(data)
 
-  const chartData = data.time.map(
-  (time: number, index: number) => ({
-    time,
+  const chartData = data.frequency.map(
+  (frequency: number, index: number) => ({
+    frequency,
     amplitude: data.amplitude[index]
   })
 )
@@ -48,8 +48,10 @@ export const AnalyzeButton = ({
   }
 
   return (
-    <button onClick={handleAnalyze} >
-      FFT解析開始
-    </button>
+    <div>
+        <button onClick={handleAnalyze} >
+              FFT_spectrum解析開始
+        </button>
+    </div>
   )
 }
