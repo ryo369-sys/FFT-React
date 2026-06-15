@@ -21,8 +21,11 @@ Radio Bottomからパラメータを持ってきてFFTに代入する(この時�
 
 画面一覧
 figmaを使用
+
 画面遷移図
+
 API一覧
+
 DB設計
 ディレクトリ構成FFTをPythonで実装してそれをFastAPIでフロントエンドにレスポンスで返す
 
